@@ -2,11 +2,11 @@ use v6;
 
 class MIDI:auth<github:jonathanstowe>:ver<v0.0.1> {
     class Header {
-        has Str     $!MThd = "MThd";
-        has uint32  $!header_length = 6;
-        has uint16  $!format = 1;
-        has uint16  $!n = 0;
-        has uint16  $!division = 96;
+        has Str     $.MThd          = "MThd";
+        has uint32  $.header-length = 6;
+        has uint16  $.format        = 1;
+        has uint16  $.track-chunks  = 0;
+        has uint16  $.division      = 96;
     }
 
 =begin comment
