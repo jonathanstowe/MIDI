@@ -1,13 +1,29 @@
 use v6;
 
 class MIDI:auth<github:jonathanstowe>:ver<v0.0.1> {
+    class Track {
+        class Event {
+        }
+
+        has Str     $.MTrk      = "Mtrk";
+        has uint32  $.length    = 0;
+
+        has Event @.events;
+
+    }
+
     class Header {
         has Str     $.MThd          = "MThd";
         has uint32  $.header-length = 6;
         has uint16  $.format        = 1;
         has uint16  $.track-chunks  = 0;
         has uint16  $.division      = 96;
+
     }
+
+    has Header $.header;
+    has Track @.tracks;
+
 
 =begin comment
 
