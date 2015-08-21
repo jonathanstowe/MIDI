@@ -24,6 +24,7 @@ is($obj.header.track-chunks,1, "got no track chunks");
 is($obj.header.format, 1, "got correct format");
 is($obj.header.header-length, 6, "header-length");
 
+done;
 
 
 # vim: expandtab shiftwidth=4 ft=perl6
