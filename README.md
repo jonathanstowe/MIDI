@@ -10,3 +10,9 @@ parameter changes,) between electronic musical instruments and computers.
 
 This module provides a mechanism to read and write standard MIDI files
 (SMF) and work with MIDI data.
+
+## Installation
+
+## Support
+
+## Licemse and Copyright
