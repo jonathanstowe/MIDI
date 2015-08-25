@@ -1,0 +1,16 @@
+{
+  "name" : "MIDI",
+  "support" : {
+    "source" : ""
+  },
+  "perl" : "v6",
+  "build-depends" : [ ],
+  "provides" : null,
+  "depends" : [ ],
+  "test-depends" : [
+    "lib",
+    "Test"
+  ],
+  "description" : "Deal with Standard MIDI files and MIDI data in Perl 6",
+  "version" : "v0.0.1"
+}
