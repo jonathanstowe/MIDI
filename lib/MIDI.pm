@@ -1,8 +1,10 @@
-use v6;
+use v6.c;
 
-class MIDI:auth<github:jonathanstowe>:ver<v0.0.1> {
+use experimental :pack;
 
-    has Str $!filename;
+class MIDI:auth<github:jonathanstowe>:ver<0.0.1> {
+
+    has Str        $!filename;
     has IO::Handle $!file-handle;
 
     class Track {
@@ -10,7 +12,7 @@ class MIDI:auth<github:jonathanstowe>:ver<v0.0.1> {
         }
 
         has Str     $.MTrk      = "MTrk";
-        has uint32  $.length    = 0;
+        has Int  $.length    = 0;
 
         has Event @.events;
 
@@ -18,10 +20,10 @@ class MIDI:auth<github:jonathanstowe>:ver<v0.0.1> {
 
     class Header {
         has Str     $.preamble          = "MThd";
-        has uint32  $.header-length     = 6;
-        has uint16  $.format            = 1;
-        has uint16  $.track-chunks      = 0;
-        has uint16  $.division          = 96;
+        has Int     $.header-length     = 6;
+        has Int     $.format            = 1;
+        has Int     $.track-chunks      = 0;
+        has Int     $.division          = 96;
 
         my Str $pattern = "A4 N n n n";
         my Int $length  = 14;

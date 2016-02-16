@@ -1,7 +1,6 @@
 #!perl6
 
-use v6;
-use lib 'lib';
+use v6.c;
 use Test;
 
 use MIDI;
@@ -21,10 +20,8 @@ isa-ok($obj.header, MIDI::Header, "and got the right sort of thing");
 is($obj.header.preamble, "MThd", "got correct preamble");
 is($obj.header.division, 96, "got correct division");
 is($obj.header.track-chunks,1, "got no track chunks");
-is($obj.header.format, 1, "got correct format");
+is($obj.header.format, 0, "got correct format ");
 is($obj.header.header-length, 6, "header-length");
 
-done;
-
-
+done-testing;
 # vim: expandtab shiftwidth=4 ft=perl6

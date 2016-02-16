@@ -1,7 +1,6 @@
 #!perl6
 
-use v6;
-use lib 'lib';
+use v6.c;
 use Test;
 
 use MIDI;
@@ -24,7 +23,7 @@ is($obj.header.track-chunks,1, "got no track chunks");
 is($obj.header.format, 1, "got correct format");
 is($obj.header.header-length, 6, "header-length");
 
-done;
+done-testing;
 
 
 # vim: expandtab shiftwidth=4 ft=perl6
