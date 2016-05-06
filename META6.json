@@ -3,14 +3,13 @@
   "support" : {
     "source" : ""
   },
-  "perl" : "v6",
+  "perl" : "6.c",
   "build-depends" : [ ],
   "provides" : null,
   "depends" : [ ],
   "test-depends" : [
-    "lib",
     "Test"
   ],
   "description" : "Deal with Standard MIDI files and MIDI data in Perl 6",
-  "version" : "v0.0.1"
+  "version" : "0.0.1"
 }
