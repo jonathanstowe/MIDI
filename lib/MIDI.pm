@@ -4,26 +4,38 @@ use experimental :pack;
 
 class MIDI:auth<github:jonathanstowe>:ver<0.0.1> {
 
+    role Picture[Str $picture] {
+        has Str $.picture = $picture;
+    }
+
+    sub trait_mod:<is> (Attribute $a, Str :$picture!) {
+        $a does Picture[$picture];
+    }
+
     has Str        $!filename;
     has IO::Handle $!file-handle;
 
     class Track {
         class Event {
+            has Int $.timestamp;
+            has Int $.status;
+            has Int $.data-one;
+            has Int $.data-two;
         }
 
         has Str     $.MTrk      = "MTrk";
-        has Int  $.length    = 0;
+        has Int     $.length    = 0;
 
         has Event @.events;
 
     }
 
     class Header {
-        has Str     $.preamble          = "MThd";
-        has Int     $.header-length     = 6;
-        has Int     $.format            = 1;
-        has Int     $.track-chunks      = 0;
-        has Int     $.division          = 96;
+        has Str     $.preamble          is picture('A4')    = "MThd";
+        has Int     $.header-length     is picture('N')     = 6;
+        has Int     $.format            is picture('n')     = 1;
+        has Int     $.track-chunks      is picture('n')     = 0;
+        has Int     $.division          is picture('n')     = 96;
 
         my Str $pattern = "A4 N n n n";
         my Int $length  = 14;
