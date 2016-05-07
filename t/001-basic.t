@@ -3,7 +3,7 @@
 use v6.c;
 use Test;
 
-use-ok('MIDI', 'Can use MIDI module');
+use-ok('Audio::MIDI', 'Can use Audio::MIDI module');
 
 
 done-testing();

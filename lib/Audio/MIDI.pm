@@ -2,7 +2,7 @@ use v6.c;
 
 use experimental :pack;
 
-class MIDI:auth<github:jonathanstowe>:ver<0.0.1> {
+class Audio::MIDI:auth<github:jonathanstowe>:ver<0.0.1> {
 
     role Picture[Str $picture] {
         has Str $.picture = $picture;
