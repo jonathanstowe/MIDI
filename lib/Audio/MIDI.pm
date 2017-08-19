@@ -12,6 +12,9 @@ class Audio::MIDI:auth<github:jonathanstowe>:ver<0.0.1> {
         $a does Picture[$picture];
     }
 
+    role BlobData[Int :$length]  {
+    }
+
     has Str        $!filename;
     has IO::Handle $!file-handle;
 
