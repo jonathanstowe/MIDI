@@ -1,15 +1,36 @@
 {
-  "name" : "MIDI",
-  "support" : {
-    "source" : ""
+  "name": "MIDI",
+  "source-url": "git://github.com/jonathanstowe/MIDI.git",
+  "support": {
+    "source": "git://github.com/jonathanstowe/MIDI.git",
+	"email" : "jns+gh@gellyfish.co.uk",
+    "bugtracker" : "https://github.com/jonathanstowe/MIDI/issues"
   },
-  "perl" : "6.c",
-  "build-depends" : [ ],
-  "provides" : null,
-  "depends" : [ ],
-  "test-depends" : [
+  "perl": "6.c",
+  "resources": [
+  ],
+  "build-depends": [
+  ],
+  "auth": "github:jonathanstowe",
+  "depends": [
+    
+  ],
+  "tags": [
+	"audio",
+	"MIDI",
+	"SMF"
+  ],
+  "license": "Artistic-2.0",
+  "test-depends": [
     "Test"
   ],
-  "description" : "Deal with Standard MIDI files and MIDI data in Perl 6",
-  "version" : "0.0.1"
+  "provides": {
+     "Audio::MIDI" : "lib/Audio/MIDI.pm"
+  },
+  "version": "0.0.1",
+  "authors": [
+	"Jonathan Stowe <jns+gh@gellyfish.co.uk>"
+  ],
+  "description": "Deal with Standard MIDI files and MIDI data in Perl 6",
+  "meta-version": "0"
 }
