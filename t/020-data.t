@@ -1,13 +1,13 @@
 #!perl6
 
-use v6.c;
+use v6;
 use Test;
 
 use Audio::MIDI;
 
 my $test-data = "t/data".IO;
 
-my $mandelbrot = $test-data.child('mandelbrot.mid');
+my $mandelbrot = $test-data.add('mandelbrot.mid');
 
 my $obj;
 
