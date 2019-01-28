@@ -1,4 +1,4 @@
-use v6.c;
+use v6;
 
 use experimental :pack;
 
@@ -8,7 +8,7 @@ class Audio::MIDI:auth<github:jonathanstowe>:ver<0.0.1> {
         has Str $.picture = $picture;
     }
 
-    sub trait_mod:<is> (Attribute $a, Str :$picture!) {
+    multi sub trait_mod:<is> (Attribute $a, Str :$picture!) {
         $a does Picture[$picture];
     }
 
